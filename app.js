@@ -719,20 +719,47 @@
       }
     });
 
-    // Form submission
+    // Hardened Form Submission (Honeypot, Rate Limiting, Sanitization)
+    let lastSubmissionTime = 0;
     if (form) {
       form.addEventListener('submit', (e) => {
         e.preventDefault();
+
+        // 1. Anti-Bot Honeypot Trap
+        const botTrap = document.getElementById('input-bot-trap');
+        if (botTrap && botTrap.value) {
+          // Silent abort for automated bots
+          return;
+        }
+
+        // 2. Client-Side Submission Rate Limiting (8s cooldown)
+        const now = Date.now();
+        if (now - lastSubmissionTime < 8000) {
+          showToast('Please wait a moment before submitting again.');
+          return;
+        }
+
         const nameInput = document.getElementById('input-name');
         const phoneInput = document.getElementById('input-phone');
         const plotChoice = document.getElementById('select-plot-pref');
 
-        const clientName = nameInput ? nameInput.value.trim() : 'Esteemed Guest';
+        // 3. Strict Input Sanitization & Validation
+        const rawName = nameInput ? nameInput.value.trim() : '';
+        const cleanName = rawName.replace(/[<>'"\/\\;]/g, '').slice(0, 80) || 'Esteemed Guest';
+
+        const rawPhone = phoneInput ? phoneInput.value.trim() : '';
+        const cleanPhone = rawPhone.replace(/[^\d+]/g, '');
+        if (cleanPhone.length < 10) {
+          showToast('Please enter a valid 10-digit contact number.');
+          return;
+        }
+
+        lastSubmissionTime = now;
         const randomNum = Math.floor(1000 + Math.random() * 9000);
         const passCode = `SP-DELPHI-${randomNum}`;
 
         if (vipPassCodeEl) vipPassCodeEl.textContent = passCode;
-        if (clientNameEl) clientNameEl.textContent = clientName;
+        if (clientNameEl) clientNameEl.textContent = cleanName;
 
         if (formContainer && confirmationContainer) {
           formContainer.style.display = 'none';

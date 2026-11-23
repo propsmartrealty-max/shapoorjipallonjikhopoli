@@ -1,0 +1,10 @@
+# robots.txt for https://shapoorjitownship.in/
+User-agent: *
+Allow: /
+Disallow: /.git/
+Disallow: /server.py
+Disallow: /*.jsonl$
+Disallow: /*.py$
+
+Sitemap: https://shapoorjitownship.in/sitemap.xml
+Host: shapoorjitownship.in
