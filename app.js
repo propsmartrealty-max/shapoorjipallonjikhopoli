@@ -986,6 +986,31 @@
   }
 
   // -------------------------------------------------------------------------
+  // 13. Regional FAQ Accordion Interaction
+  // -------------------------------------------------------------------------
+  function initRegionalFaq() {
+    const faqItems = document.querySelectorAll('.faq-accordion-item');
+    faqItems.forEach((item) => {
+      const questionBar = item.querySelector('.faq-question-bar');
+      if (questionBar) {
+        questionBar.addEventListener('click', () => {
+          const isActive = item.classList.contains('active');
+          faqItems.forEach((other) => {
+            other.classList.remove('active');
+            const icon = other.querySelector('.faq-toggle-icon');
+            if (icon) icon.textContent = '+';
+          });
+          if (!isActive) {
+            item.classList.add('active');
+            const icon = item.querySelector('.faq-toggle-icon');
+            if (icon) icon.textContent = '−';
+          }
+        });
+      }
+    });
+  }
+
+  // -------------------------------------------------------------------------
   // Initialize Everything on DOM Ready
   // -------------------------------------------------------------------------
   document.addEventListener('DOMContentLoaded', () => {
@@ -1000,5 +1025,6 @@
     initVipModal();
     initAudioButton();
     init3DTiltCards();
+    initRegionalFaq();
   });
 })();
