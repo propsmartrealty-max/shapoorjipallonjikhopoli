@@ -21,6 +21,8 @@
       facing: 'Panoramic North-East / Sahyadri Valley',
       price: '₹ 1.85 Cr*',
       priceSub: 'Starting at',
+      image: 'assets/spre/india-wellness-capital-hill-land.webp',
+      imgTag: 'Elevation 440m • Ridge Hill Panorama',
       description: 'Crowning the highest ridge of the township, Delphi Ridge Estates offer unhindered panoramic views of the Sahyadri mountains and morning mist valleys. Custom luxury villa footprint with private infinity pool provisions.',
       perks: [
         'Unobstructed 270° Sahyadri valley views',
@@ -40,6 +42,8 @@
       facing: 'Forest Canopy / Ancient Woods',
       price: '₹ 1.25 Cr*',
       priceSub: 'Starting at',
+      image: 'assets/spre/gallery_photogallery_2.webp',
+      imgTag: 'Elevation 415m • 380-Acre Bio-Forest Canopy',
       description: 'Enveloped by the 380-acre private bio-forest reserve. Designed for nature enthusiasts seeking complete tranquility, native birdsong, and Shinrin-yoku forest bathing at their doorstep.',
       perks: [
         'Enveloped by dense evergreen trees & teak canopy',
@@ -59,6 +63,8 @@
       facing: 'Perennial Stream & Waterfall',
       price: 'from ₹95 Lacs*',
       priceSub: 'All-inclusive starting at (Min 2,000 sq.ft)',
+      image: 'assets/spre/gallery_photogallery_3.webp',
+      imgTag: 'Elevation 395m • Natural Cascades & Meadows',
       description: 'Nestled along natural seasonal waterfalls and the perennial rainwater check-dam basin. 100% N.A. sanctioned flat, easily buildable land parcels ideal for weekend wellness retreats and custom family bungalow estates.',
       perks: [
         '100% Collector approved N.A. bungalow land with 7/12 extract',
@@ -78,6 +84,8 @@
       facing: 'Lakeside & Central Greens',
       price: 'Exclusive to Owners',
       priceSub: 'Resident Privilege',
+      image: 'assets/spre/popup.webp',
+      imgTag: '50,000 Sq.Ft • Delphi Wellness Pavilion',
       description: 'A 50,000 sq.ft world-class wellness sanctuary curated in partnership with renowned global spa and wellness practitioners. Features Olympic lap pools, thermal hydrotherapy, and organic farm-to-fork dining.',
       perks: [
         'Heated indoor & open-air infinity lap pools',
@@ -97,6 +105,8 @@
       facing: 'Central Meadow Sunbelt',
       price: 'Community Shared Farm',
       priceSub: 'Harvest Allocation for All Estates',
+      image: 'assets/spre/gallery_photogallery_4.webp',
+      imgTag: '25+ Acres • Vedic Agriscaping Trails',
       description: 'Every resident enjoys a dedicated allotment in our permaculture and organic farm managed by expert agronomists. Relish pesticide-free seasonal vegetables, herbs, and exotic fruits delivered directly to your doorstep.',
       perks: [
         'Over 40 indigenous herbal and fruit-bearing species',
@@ -116,6 +126,8 @@
       facing: 'North-West Constellations & Valley',
       price: 'Open to Residents',
       priceSub: 'Private Township Access',
+      image: 'assets/spre/gallery_photogallery_5.webp',
+      imgTag: 'Elevation 455m • Sahyadri Stargazing Apex',
       description: 'Sitting at the apex elevation of the Delphi township, the Stargazing Observatory and High-Altitude Trail Hub offer zero-light-pollution views of deep night skies and thrilling downhill cycling circuits.',
       perks: [
         'High-powered astronomical telescope viewing dome',
@@ -442,10 +454,21 @@
     const perkList = document.getElementById('inspector-perks-list');
     const priceAmount = document.getElementById('inspector-price');
     const priceSub = document.getElementById('inspector-price-sub');
+    const inspectorImg = document.getElementById('inspector-image');
+    const inspectorImgTag = document.getElementById('inspector-img-tag');
 
     function updateInspector(zoneKey) {
       const data = ZONES_DATA[zoneKey];
       if (!data) return;
+
+      // Update image & photo tag
+      if (inspectorImg && data.image) {
+        inspectorImg.src = data.image;
+        inspectorImg.alt = data.name;
+      }
+      if (inspectorImgTag && data.imgTag) {
+        inspectorImgTag.textContent = data.imgTag;
+      }
 
       // Update badge
       if (tagBadge) {
