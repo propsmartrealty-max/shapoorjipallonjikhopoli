@@ -1,67 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Root Master Landing Page -->
   <url>
     <loc>https://shapoorjitownship.in/</loc>
     <lastmod>2026-11-23</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    
+    <!-- Google Image Schema Tags for High Ranking -->
     <image:image>
       <image:loc>https://shapoorjitownship.in/assets/spre/india-wellness-capital-hill-land.webp</image:loc>
-      <image:title>Shapoorji Pallonji India's Wellness Capital Khopoli</image:title>
-      <image:caption>380-acre private bio-forest reserve and 100% N.A. freehold bungalow plots from ₹95 Lacs* in Khopoli</image:caption>
+      <image:title>Shapoorji Pallonji Khopoli Bungalow Plots near Lonavala</image:title>
+      <image:caption>900+ acre master township and 380-acre private bio-forest reserve with 100% N.A. freehold bungalow plots from ₹95 Lacs* in Khopoli</image:caption>
+      <image:geo_location>Khopoli, Maharashtra, India</image:geo_location>
     </image:image>
+
     <image:image>
       <image:loc>https://shapoorjitownship.in/assets/spre/popup.webp</image:loc>
-      <image:title>The Delphi Clubhouse and Wellness Sanctuary</image:title>
+      <image:title>The Delphi Sanctuary Clubhouse - India's Wellness Capital</image:title>
+      <image:caption>50,000 sq.ft resort clubhouse with heated Olympic lap pool, hydrotherapy spa, and private cinema</image:caption>
+      <image:geo_location>Khopoli, Maharashtra, India</image:geo_location>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://shapoorjitownship.in/assets/spre/gallery_photogallery_1.webp</image:loc>
+      <image:title>Sahyadri Mountain Ridge Panorama - Delphi Plots</image:title>
+      <image:caption>Elevation 440m panoramic views of Sahyadri peaks and morning mist valleys</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://shapoorjitownship.in/assets/spre/gallery_photogallery_2.webp</image:loc>
+      <image:title>380-Acre Private Bio-Forest Canopy &amp; AQI 24 Air</image:title>
+      <image:caption>Pristine teak and evergreen forest reserve with natural hiking and reflection paths</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://shapoorjitownship.in/assets/spre/gallery_photogallery_3.webp</image:loc>
+      <image:title>Cascade Meadows Perennial Waterfall Plots</image:title>
+      <image:caption>100% Collector approved N.A. flat bungalow plots (Min 2,000 sq.ft) starting from ₹95 Lacs*</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://shapoorjitownship.in/assets/spre/gallery_photogallery_4.webp</image:loc>
+      <image:title>25+ Acres Vedic Organic Agriscaping Orchards</image:title>
+      <image:caption>Permaculture gardens, medicinal herb nursery, and seasonal farm-to-table harvests for residents</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://shapoorjitownship.in/assets/spre/gallery_photogallery_5.webp</image:loc>
+      <image:title>Sahyadri High Altitude Stargazing Observatory &amp; Trails</image:title>
+      <image:caption>455m peak elevation observation deck overlooking Lonavala ghat cliffs with astronomical viewing dome</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://shapoorjitownship.in/assets/spre/qr_qr_code.webp</image:loc>
+      <image:title>Official MahaRERA Registration QR Code PP1270002602610</image:title>
+      <image:caption>Statutory MahaRERA registered plotted township project under the Government of Maharashtra</image:caption>
     </image:image>
   </url>
+
+  <!-- Interactive Masterplan Section -->
   <url>
     <loc>https://shapoorjitownship.in/#masterplan</loc>
     <lastmod>2026-11-23</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  <url>
-    <loc>https://shapoorjitownship.in/#amenities</loc>
-    <lastmod>2026-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://shapoorjitownship.in/#villas</loc>
-    <lastmod>2026-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://shapoorjitownship.in/#connectivity</loc>
-    <lastmod>2026-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+
+  <!-- Regional Buyer Guide & Micro-Market FAQs -->
   <url>
     <loc>https://shapoorjitownship.in/#regional-faq</loc>
     <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
   </url>
+
+  <!-- 40+ Curated Amenities & Specs -->
+  <url>
+    <loc>https://shapoorjitownship.in/#amenities</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Architectural Villa Archetypes -->
+  <url>
+    <loc>https://shapoorjitownship.in/#villas</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Regional Golden Connectivity & Travel Times -->
+  <url>
+    <loc>https://shapoorjitownship.in/#connectivity</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- The 5 Pillars of India's Wellness Capital -->
   <url>
     <loc>https://shapoorjitownship.in/#pillars</loc>
     <lastmod>2026-11-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
+
+  <!-- Investment, Clear Titles & 7/12 Calculator -->
   <url>
     <loc>https://shapoorjitownship.in/#investment</loc>
     <lastmod>2026-11-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
+
+  <!-- Shapoorji Pallonji 158+ Years Heritage -->
   <url>
     <loc>https://shapoorjitownship.in/#legacy</loc>
     <lastmod>2026-11-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.75</priority>
   </url>
+
 </urlset>

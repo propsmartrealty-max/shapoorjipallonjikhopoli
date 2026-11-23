@@ -1,10 +1,33 @@
 # robots.txt for https://shapoorjitownship.in/
+
+# Explicit Whitelist for Google Search Engine Crawlers
+User-agent: Googlebot
+Allow: /
+Allow: /assets/
+Allow: /sitemap.xml
+
+User-agent: Googlebot-Image
+Allow: /assets/
+Allow: /assets/spre/
+
+User-agent: Googlebot-Mobile
+Allow: /
+
+# Explicit Whitelist for Bingbot & IndexNow
+User-agent: Bingbot
+Allow: /
+Allow: /assets/
+Allow: /sitemap.xml
+
+# Global Crawling Rules
 User-agent: *
 Allow: /
 Disallow: /.git/
 Disallow: /server.py
 Disallow: /*.jsonl$
 Disallow: /*.py$
+Disallow: /scratch/
 
+# Sitemap Directive
 Sitemap: https://shapoorjitownship.in/sitemap.xml
 Host: shapoorjitownship.in
