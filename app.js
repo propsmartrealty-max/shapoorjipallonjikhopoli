@@ -760,19 +760,63 @@
   }
 
   // -------------------------------------------------------------------------
-  // 12. Navbar Scroll State & Mobile Menu
+  // 12. Navbar Scroll State, Scrollspy & Home Navigation
   // -------------------------------------------------------------------------
   function initNavbar() {
     const navbar = document.querySelector('.navbar');
     const mobileToggle = document.getElementById('mobile-nav-toggle');
     const navLinks = document.getElementById('nav-links');
+    const brandLogo = document.getElementById('nav-brand-logo');
+    const links = document.querySelectorAll('.nav-link');
 
+    // Attach logo directly to Home
+    if (brandLogo) {
+      brandLogo.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        links.forEach((l) => l.classList.remove('active'));
+        const homeLink = document.querySelector('.nav-link[data-nav="home"]');
+        if (homeLink) homeLink.classList.add('active');
+      });
+    }
+
+    // Scroll state & Scrollspy
+    const sections = ['masterplan', 'amenities', 'infographics', 'gallery', 'pillars', 'villas', 'connectivity', 'legacy'];
+    
     window.addEventListener('scroll', () => {
       if (!navbar) return;
       if (window.scrollY > 40) {
         navbar.classList.add('scrolled');
       } else {
         navbar.classList.remove('scrolled');
+      }
+
+      // Dynamic Active Link Highlighting
+      if (window.scrollY < 300) {
+        links.forEach((l) => l.classList.remove('active'));
+        const homeLink = document.querySelector('.nav-link[data-nav="home"]');
+        if (homeLink) homeLink.classList.add('active');
+        return;
+      }
+
+      const scrollPos = window.scrollY + 180;
+      let currentSection = null;
+
+      sections.forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) {
+          const top = el.offsetTop;
+          const height = el.offsetHeight;
+          if (scrollPos >= top && scrollPos < top + height) {
+            currentSection = id;
+          }
+        }
+      });
+
+      if (currentSection) {
+        links.forEach((l) => l.classList.remove('active'));
+        const activeLink = document.querySelector(`.nav-link[data-nav="${currentSection}"]`);
+        if (activeLink) activeLink.classList.add('active');
       }
     });
 
@@ -786,9 +830,11 @@
           navLinks.style.top = '100%';
           navLinks.style.left = '0';
           navLinks.style.width = '100%';
-          navLinks.style.background = 'rgba(7, 11, 9, 0.98)';
+          navLinks.style.background = 'rgba(255, 255, 255, 0.98)';
           navLinks.style.padding = '1.5rem';
-          navLinks.style.borderBottom = '1px solid #D4AF37';
+          navLinks.style.border = '1px solid var(--emerald-border)';
+          navLinks.style.borderRadius = '16px';
+          navLinks.style.boxShadow = '0 15px 40px rgba(12, 35, 64, 0.15)';
         }
       });
     }

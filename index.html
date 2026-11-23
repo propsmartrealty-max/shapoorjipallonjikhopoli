@@ -48,37 +48,28 @@
   <div class="navbar-pill-wrapper" id="navbar-pill-wrapper">
     <header class="navbar">
       <div class="nav-inner">
-        <!-- Official Brand Logo (From Shapoorji Pallonji) -->
-        <a href="#" class="spre-brand-header">
+        <!-- Official Brand Logo (Attached to Home Page) -->
+        <a href="#" class="spre-brand-header" title="Home - India's Wellness Capital" id="nav-brand-logo">
           <img src="assets/iwc-logo-duo.png" alt="Shapoorji Pallonji - India's Wellness Capital" class="iwc-official-logo-img">
-          <span class="nav-brand-pill">✦ SPRE TOWNSHIP</span>
         </a>
 
-        <!-- Desktop Nav Links in Sleek Pill Container -->
-        <nav>
+        <!-- Desktop Nav Links in Sleek Pill Container (Strictly Single Line) -->
+        <nav class="nav-menu-wrapper">
           <ul class="nav-links" id="nav-links">
-            <li><a href="#masterplan" class="nav-link">Masterplan</a></li>
-            <li><a href="#amenities" class="nav-link">Amenities & Specs</a></li>
-            <li><a href="#infographics" class="nav-link nav-link-pill-accent">Infographics</a></li>
-            <li><a href="#gallery" class="nav-link">Nature Gallery</a></li>
-            <li><a href="#pillars" class="nav-link">5 Pillars</a></li>
-            <li><a href="#villas" class="nav-link">Villas</a></li>
-            <li><a href="#connectivity" class="nav-link">Connectivity</a></li>
-            <li><a href="#legacy" class="nav-link">SP Legacy</a></li>
+            <li><a href="#" class="nav-link active" data-nav="home">Home</a></li>
+            <li><a href="#masterplan" class="nav-link" data-nav="masterplan">Masterplan</a></li>
+            <li><a href="#amenities" class="nav-link" data-nav="amenities">Amenities & Specs</a></li>
+            <li><a href="#infographics" class="nav-link" data-nav="infographics">Infographics</a></li>
+            <li><a href="#gallery" class="nav-link" data-nav="gallery">Nature Gallery</a></li>
+            <li><a href="#pillars" class="nav-link" data-nav="pillars">5 Pillars</a></li>
+            <li><a href="#villas" class="nav-link" data-nav="villas">Villas</a></li>
+            <li><a href="#connectivity" class="nav-link" data-nav="connectivity">Connectivity</a></li>
+            <li><a href="#legacy" class="nav-link" data-nav="legacy">SP Legacy</a></li>
           </ul>
         </nav>
 
         <!-- Right Side Nav Actions -->
         <div class="nav-actions">
-          <!-- Nature Ambience Audio Button -->
-          <button id="audio-toggle-btn" class="audio-toggle-btn" title="Play Sahyadri Nature Ambience">
-            <div class="audio-bars">
-              <div class="audio-bar"></div>
-              <div class="audio-bar"></div>
-              <div class="audio-bar"></div>
-            </div>
-          </button>
-
           <!-- Book Visit CTA Pill -->
           <button class="btn btn-gold btn-sm btn-pill" data-open-modal="visit">
             Schedule VIP Visit
