@@ -210,32 +210,32 @@ body {
    REFINED FLOATING PILL NAVBAR
    ========================================================================== */
 .navbar-pill-wrapper {
-  position: sticky;
-  top: 0.85rem;
+  position: fixed;
+  top: 1.15rem;
   left: 0;
   width: 100%;
   z-index: 1000;
-  padding: 0 1.25rem;
+  padding: 0 1.5rem;
   pointer-events: none;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .navbar {
   pointer-events: auto;
-  max-width: 1440px;
+  max-width: 1380px;
   margin: 0 auto;
   position: relative;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.68) 50%, rgba(244, 253, 248, 0.8) 100%);
   backdrop-filter: blur(28px) saturate(210%);
   -webkit-backdrop-filter: blur(28px) saturate(210%);
-  border: 1px solid rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.92);
   border-radius: 9999px;
-  padding: 0.35rem 1.05rem;
+  padding: 0.38rem 1.1rem;
   box-shadow: 
-    0 16px 45px -8px rgba(6, 40, 23, 0.12),
+    0 20px 50px -10px rgba(6, 40, 23, 0.16),
     0 0 0 1px rgba(255, 255, 255, 0.95) inset,
-    0 1px 3px rgba(0, 0, 0, 0.04),
-    0 4px 18px rgba(16, 133, 73, 0.08);
+    0 2px 8px rgba(0, 0, 0, 0.04),
+    0 8px 30px rgba(16, 133, 73, 0.1);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
 }
@@ -264,15 +264,16 @@ body {
   opacity: 1;
 }
 
+.navbar.scrolled,
 .navbar-pill-wrapper.scrolled .navbar {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.88) 100%);
   backdrop-filter: blur(32px) saturate(240%);
   -webkit-backdrop-filter: blur(32px) saturate(240%);
-  border-color: rgba(16, 133, 73, 0.25);
+  border-color: rgba(16, 133, 73, 0.28);
   box-shadow: 
-    0 22px 52px -6px rgba(6, 40, 23, 0.18),
+    0 24px 55px -6px rgba(6, 40, 23, 0.22),
     0 0 0 1px rgba(255, 255, 255, 0.98) inset,
-    0 0 24px rgba(16, 133, 73, 0.12);
+    0 0 28px rgba(16, 133, 73, 0.14);
   transform: translateY(-2px);
 }
 
@@ -592,7 +593,7 @@ body {
    ========================================================================== */
 .hero-section {
   position: relative;
-  padding: 6.5rem 0 3.5rem 0;
+  padding: 7.25rem 0 3.85rem 0;
   overflow: hidden;
   background: radial-gradient(circle at 75% 30%, rgba(16, 133, 73, 0.08) 0%, transparent 60%), #FFFFFF;
 }

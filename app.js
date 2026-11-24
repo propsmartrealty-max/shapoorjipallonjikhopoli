@@ -835,10 +835,13 @@
     
     window.addEventListener('scroll', () => {
       if (!navbar) return;
-      if (window.scrollY > 40) {
+      const navbarWrapper = document.getElementById('navbar-pill-wrapper');
+      if (window.scrollY > 30) {
         navbar.classList.add('scrolled');
+        if (navbarWrapper) navbarWrapper.classList.add('scrolled');
       } else {
         navbar.classList.remove('scrolled');
+        if (navbarWrapper) navbarWrapper.classList.remove('scrolled');
       }
 
       // Dynamic Active Link Highlighting
