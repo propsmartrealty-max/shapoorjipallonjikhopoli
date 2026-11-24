@@ -1,19 +1,11 @@
-# Cloudflare Pages 200 Rewrite Rules for Clean SEO URLs (Zero '#' in URLs)
-# Dedicated keyword architecture targeting Shapoorji Pallonji Khopoli Plots near Lonavala
-
-/shapoorji-pallonji-khopoli-plots-near-lonavala           /index.html 200
-/shapoorji-pallonji-khopoli-plots-masterplan              /index.html 200
-/shapoorji-pallonji-khopoli-plots-amenities               /index.html 200
-/shapoorji-pallonji-khopoli-plots-infographics            /index.html 200
-/shapoorji-pallonji-khopoli-plots-near-lonavala-gallery   /index.html 200
-/shapoorji-pallonji-khopoli-plots-wellness-pillars        /index.html 200
-/shapoorji-pallonji-khopoli-bungalow-plots-near-lonavala  /index.html 200
-/shapoorji-pallonji-khopoli-plots-connectivity-lonavala   /index.html 200
-/shapoorji-pallonji-khopoli-plots-near-lonavala-faq       /index.html 200
-/shapoorji-pallonji-legacy-khopoli-plots                  /index.html 200
-/privacy-policy                                          /index.html 200
-/terms-and-conditions                                    /index.html 200
-/disclaimer                                              /index.html 200
-
-# Fallback SPA Router
-/*                                                       /index.html 200
+# Clean URL canonical redirects for Shapoorji Pallonji Khopoli Plots near Lonavala
+/shapoorji-pallonji-khopoli-plots-near-lonavala           /shapoorji-pallonji-khopoli-plots-near-lonavala/           301
+/shapoorji-pallonji-khopoli-plots-masterplan              /shapoorji-pallonji-khopoli-plots-masterplan/              301
+/shapoorji-pallonji-khopoli-plots-amenities               /shapoorji-pallonji-khopoli-plots-amenities/               301
+/shapoorji-pallonji-khopoli-plots-infographics            /shapoorji-pallonji-khopoli-plots-infographics/            301
+/shapoorji-pallonji-khopoli-plots-near-lonavala-gallery   /shapoorji-pallonji-khopoli-plots-near-lonavala-gallery/   301
+/shapoorji-pallonji-khopoli-plots-wellness-pillars        /shapoorji-pallonji-khopoli-plots-wellness-pillars/        301
+/shapoorji-pallonji-khopoli-bungalow-plots-near-lonavala  /shapoorji-pallonji-khopoli-bungalow-plots-near-lonavala/  301
+/shapoorji-pallonji-khopoli-plots-connectivity-lonavala   /shapoorji-pallonji-khopoli-plots-connectivity-lonavala/   301
+/shapoorji-pallonji-khopoli-plots-near-lonavala-faq       /shapoorji-pallonji-khopoli-plots-near-lonavala-faq/       301
+/shapoorji-pallonji-legacy-khopoli-plots                  /shapoorji-pallonji-legacy-khopoli-plots/                  301
