@@ -831,7 +831,7 @@
     }
 
     // Scroll state & Scrollspy
-    const sections = ['masterplan', 'amenities', 'infographics', 'gallery', 'pillars', 'villas', 'connectivity', 'legacy'];
+    const sections = ['masterplan', 'amenities', 'infographics', 'gallery', 'pillars', 'villas', 'connectivity', 'regional-faq', 'legacy'];
     
     window.addEventListener('scroll', () => {
       if (!navbar) return;
@@ -872,20 +872,13 @@
 
     if (mobileToggle && navLinks) {
       mobileToggle.addEventListener('click', () => {
-        const isShown = navLinks.style.display === 'flex';
-        navLinks.style.display = isShown ? 'none' : 'flex';
-        if (!isShown) {
-          navLinks.style.flexDirection = 'column';
-          navLinks.style.position = 'absolute';
-          navLinks.style.top = '100%';
-          navLinks.style.left = '0';
-          navLinks.style.width = '100%';
-          navLinks.style.background = 'rgba(255, 255, 255, 0.98)';
-          navLinks.style.padding = '1.5rem';
-          navLinks.style.border = '1px solid var(--emerald-border)';
-          navLinks.style.borderRadius = '16px';
-          navLinks.style.boxShadow = '0 15px 40px rgba(12, 35, 64, 0.15)';
-        }
+        navLinks.classList.toggle('mobile-open');
+      });
+
+      links.forEach((link) => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('mobile-open');
+        });
       });
     }
   }
