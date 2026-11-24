@@ -810,32 +810,102 @@
   }
 
   // -------------------------------------------------------------------------
-  // 12. Navbar Scroll State, Scrollspy & Home Navigation
+  // 12. Navbar Scroll State, Clean URL Router & Scrollspy (No '#' in URLs)
   // -------------------------------------------------------------------------
   function initNavbar() {
     const navbar = document.querySelector('.navbar');
+    const navbarWrapper = document.getElementById('navbar-pill-wrapper');
     const mobileToggle = document.getElementById('mobile-nav-toggle');
     const navLinks = document.getElementById('nav-links');
-    const brandLogo = document.getElementById('nav-brand-logo');
     const links = document.querySelectorAll('.nav-link');
 
-    // Attach logo directly to Home
-    if (brandLogo) {
-      brandLogo.addEventListener('click', (e) => {
-        e.preventDefault();
+    // Dedicated Clean URL to Section Mapping (Zero '#' in URLs)
+    const urlSectionMap = {
+      '/': { id: null, nav: 'home' },
+      '/shapoorji-pallonji-khopoli-plots-near-lonavala': { id: null, nav: 'home' },
+      '/shapoorji-pallonji-khopoli-plots-masterplan': { id: 'masterplan', nav: 'masterplan' },
+      '/shapoorji-pallonji-khopoli-plots-amenities': { id: 'amenities', nav: 'amenities' },
+      '/shapoorji-pallonji-khopoli-plots-infographics': { id: 'infographics', nav: 'infographics' },
+      '/shapoorji-pallonji-khopoli-plots-near-lonavala-gallery': { id: 'gallery', nav: 'gallery' },
+      '/shapoorji-pallonji-khopoli-plots-wellness-pillars': { id: 'pillars', nav: 'pillars' },
+      '/shapoorji-pallonji-khopoli-bungalow-plots-near-lonavala': { id: 'villas', nav: 'villas' },
+      '/shapoorji-pallonji-khopoli-plots-connectivity-lonavala': { id: 'connectivity', nav: 'connectivity' },
+      '/shapoorji-pallonji-khopoli-plots-near-lonavala-faq': { id: 'regional-faq', nav: 'regional-faq' },
+      '/shapoorji-pallonji-legacy-khopoli-plots': { id: 'legacy', nav: 'legacy' },
+    };
+
+    const sectionUrlMap = {
+      'home': '/',
+      'masterplan': '/shapoorji-pallonji-khopoli-plots-masterplan',
+      'amenities': '/shapoorji-pallonji-khopoli-plots-amenities',
+      'infographics': '/shapoorji-pallonji-khopoli-plots-infographics',
+      'gallery': '/shapoorji-pallonji-khopoli-plots-near-lonavala-gallery',
+      'pillars': '/shapoorji-pallonji-khopoli-plots-wellness-pillars',
+      'villas': '/shapoorji-pallonji-khopoli-bungalow-plots-near-lonavala',
+      'connectivity': '/shapoorji-pallonji-khopoli-plots-connectivity-lonavala',
+      'regional-faq': '/shapoorji-pallonji-khopoli-plots-near-lonavala-faq',
+      'legacy': '/shapoorji-pallonji-legacy-khopoli-plots',
+    };
+
+    function scrollToSection(targetId) {
+      if (!targetId || targetId === 'home') {
         window.scrollTo({ top: 0, behavior: 'smooth' });
-        links.forEach((l) => l.classList.remove('active'));
-        const homeLink = document.querySelector('.nav-link[data-nav="home"]');
-        if (homeLink) homeLink.classList.add('active');
-      });
+      } else {
+        const el = document.getElementById(targetId);
+        if (el) {
+          const navOffset = 90;
+          const targetY = el.getBoundingClientRect().top + window.pageYOffset - navOffset;
+          window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
+        }
+      }
     }
+
+    // Intercept all internal clean URLs across Navbar, Hero, and Footer
+    document.querySelectorAll('a[href]').forEach((link) => {
+      const rawHref = link.getAttribute('href');
+      if (rawHref && urlSectionMap[rawHref]) {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const route = urlSectionMap[rawHref];
+          if (window.location.pathname !== rawHref) {
+            history.pushState({ path: rawHref }, '', rawHref);
+          }
+          scrollToSection(route.id);
+          links.forEach((l) => l.classList.remove('active'));
+          const targetNav = document.querySelector(`.nav-link[data-nav="${route.nav}"]`);
+          if (targetNav) targetNav.classList.add('active');
+          if (navLinks) navLinks.classList.remove('mobile-open');
+        });
+      }
+    });
+
+    // Handle Direct Landing / Refresh on Clean URL
+    const initialPath = window.location.pathname.replace(/\/+$/, '') || '/';
+    if (urlSectionMap[initialPath] && urlSectionMap[initialPath].id) {
+      setTimeout(() => {
+        scrollToSection(urlSectionMap[initialPath].id);
+        links.forEach((l) => l.classList.remove('active'));
+        const targetNav = document.querySelector(`.nav-link[data-nav="${urlSectionMap[initialPath].nav}"]`);
+        if (targetNav) targetNav.classList.add('active');
+      }, 250);
+    }
+
+    // Handle Browser Back / Forward History Navigation
+    window.addEventListener('popstate', () => {
+      const currentPath = window.location.pathname.replace(/\/+$/, '') || '/';
+      if (urlSectionMap[currentPath]) {
+        scrollToSection(urlSectionMap[currentPath].id);
+        links.forEach((l) => l.classList.remove('active'));
+        const targetNav = document.querySelector(`.nav-link[data-nav="${urlSectionMap[currentPath].nav}"]`);
+        if (targetNav) targetNav.classList.add('active');
+      }
+    });
 
     // Scroll state & Scrollspy
     const sections = ['masterplan', 'amenities', 'infographics', 'gallery', 'pillars', 'villas', 'connectivity', 'regional-faq', 'legacy'];
     
     window.addEventListener('scroll', () => {
       if (!navbar) return;
-      const navbarWrapper = document.getElementById('navbar-pill-wrapper');
       if (window.scrollY > 30) {
         navbar.classList.add('scrolled');
         if (navbarWrapper) navbarWrapper.classList.add('scrolled');
@@ -844,11 +914,14 @@
         if (navbarWrapper) navbarWrapper.classList.remove('scrolled');
       }
 
-      // Dynamic Active Link Highlighting
+      // Dynamic Active Link Highlighting & Clean URL Bar Synchronization
       if (window.scrollY < 300) {
         links.forEach((l) => l.classList.remove('active'));
         const homeLink = document.querySelector('.nav-link[data-nav="home"]');
         if (homeLink) homeLink.classList.add('active');
+        if (window.location.pathname !== '/' && window.location.pathname !== '') {
+          history.replaceState(null, '', '/');
+        }
         return;
       }
 
@@ -870,6 +943,10 @@
         links.forEach((l) => l.classList.remove('active'));
         const activeLink = document.querySelector(`.nav-link[data-nav="${currentSection}"]`);
         if (activeLink) activeLink.classList.add('active');
+        const cleanSlug = sectionUrlMap[currentSection];
+        if (cleanSlug && window.location.pathname !== cleanSlug) {
+          history.replaceState(null, '', cleanSlug);
+        }
       }
     });
 

@@ -14,14 +14,16 @@ KEY_LOCATION = f"https://{HOST}/{KEY}.txt"
 
 URLS = [
     f"https://{HOST}/",
-    f"https://{HOST}/#masterplan",
-    f"https://{HOST}/#amenities",
-    f"https://{HOST}/#villas",
-    f"https://{HOST}/#connectivity",
-    f"https://{HOST}/#regional-faq",
-    f"https://{HOST}/#pillars",
-    f"https://{HOST}/#investment",
-    f"https://{HOST}/#legacy"
+    f"https://{HOST}/shapoorji-pallonji-khopoli-plots-near-lonavala",
+    f"https://{HOST}/shapoorji-pallonji-khopoli-plots-masterplan",
+    f"https://{HOST}/shapoorji-pallonji-khopoli-plots-amenities",
+    f"https://{HOST}/shapoorji-pallonji-khopoli-plots-infographics",
+    f"https://{HOST}/shapoorji-pallonji-khopoli-plots-near-lonavala-gallery",
+    f"https://{HOST}/shapoorji-pallonji-khopoli-plots-wellness-pillars",
+    f"https://{HOST}/shapoorji-pallonji-khopoli-bungalow-plots-near-lonavala",
+    f"https://{HOST}/shapoorji-pallonji-khopoli-plots-connectivity-lonavala",
+    f"https://{HOST}/shapoorji-pallonji-khopoli-plots-near-lonavala-faq",
+    f"https://{HOST}/shapoorji-pallonji-legacy-khopoli-plots"
 ]
 
 payload = {

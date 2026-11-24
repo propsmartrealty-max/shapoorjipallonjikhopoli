@@ -5,7 +5,7 @@
   <!-- Root Master Landing Page -->
   <url>
     <loc>https://shapoorjitownship.in/</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     
@@ -61,68 +61,84 @@
     </image:image>
   </url>
 
-  <!-- Interactive Masterplan Section -->
+  <!-- Shapoorji Pallonji Khopoli Plots near Lonavala Canonical Hub -->
   <url>
-    <loc>https://shapoorjitownship.in/#masterplan</loc>
-    <lastmod>2026-11-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://shapoorjitownship.in/shapoorji-pallonji-khopoli-plots-near-lonavala</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
 
-  <!-- Regional Buyer Guide & Micro-Market FAQs -->
+  <!-- Interactive Masterplan & Plot Explorer -->
   <url>
-    <loc>https://shapoorjitownship.in/#regional-faq</loc>
-    <lastmod>2026-11-23</lastmod>
+    <loc>https://shapoorjitownship.in/shapoorji-pallonji-khopoli-plots-masterplan</loc>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
 
-  <!-- 40+ Curated Amenities & Specs -->
+  <!-- Regional Buyer Guide & Micro-Market FAQs -->
   <url>
-    <loc>https://shapoorjitownship.in/#amenities</loc>
-    <lastmod>2026-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <loc>https://shapoorjitownship.in/shapoorji-pallonji-khopoli-plots-near-lonavala-faq</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
   </url>
 
-  <!-- Architectural Villa Archetypes -->
+  <!-- 40+ Curated Lifestyle & Clubhouse Amenities -->
   <url>
-    <loc>https://shapoorjitownship.in/#villas</loc>
-    <lastmod>2026-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <loc>https://shapoorjitownship.in/shapoorji-pallonji-khopoli-plots-amenities</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Architectural Bungalow Villa Archetypes near Lonavala -->
+  <url>
+    <loc>https://shapoorjitownship.in/shapoorji-pallonji-khopoli-bungalow-plots-near-lonavala</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
   </url>
 
   <!-- Regional Golden Connectivity & Travel Times -->
   <url>
-    <loc>https://shapoorjitownship.in/#connectivity</loc>
-    <lastmod>2026-11-23</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://shapoorjitownship.in/shapoorji-pallonji-khopoli-plots-connectivity-lonavala</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Master Township Infographics & Engineering Benchmarks -->
+  <url>
+    <loc>https://shapoorjitownship.in/shapoorji-pallonji-khopoli-plots-infographics</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Sahyadri Bio-Reserve Nature Gallery -->
+  <url>
+    <loc>https://shapoorjitownship.in/shapoorji-pallonji-khopoli-plots-near-lonavala-gallery</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <!-- The 5 Pillars of India's Wellness Capital -->
   <url>
-    <loc>https://shapoorjitownship.in/#pillars</loc>
-    <lastmod>2026-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://shapoorjitownship.in/shapoorji-pallonji-khopoli-plots-wellness-pillars</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
 
-  <!-- Investment, Clear Titles & 7/12 Calculator -->
+  <!-- Shapoorji Pallonji 158+ Years Heritage & Trust -->
   <url>
-    <loc>https://shapoorjitownship.in/#investment</loc>
-    <lastmod>2026-11-23</lastmod>
+    <loc>https://shapoorjitownship.in/shapoorji-pallonji-legacy-khopoli-plots</loc>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Shapoorji Pallonji 158+ Years Heritage -->
-  <url>
-    <loc>https://shapoorjitownship.in/#legacy</loc>
-    <lastmod>2026-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.80</priority>
   </url>
 
 </urlset>
