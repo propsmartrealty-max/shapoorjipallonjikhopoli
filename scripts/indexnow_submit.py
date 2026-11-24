@@ -21,6 +21,7 @@ URLS = [
     f"https://{HOST}/shapoorji-pallonji-khopoli-plots-near-lonavala-gallery",
     f"https://{HOST}/shapoorji-pallonji-khopoli-plots-wellness-pillars",
     f"https://{HOST}/shapoorji-pallonji-khopoli-bungalow-plots-near-lonavala",
+    f"https://{HOST}/shapoorji-pallonji-khopoli-lonavala-real-estate-market",
     f"https://{HOST}/shapoorji-pallonji-khopoli-plots-connectivity-lonavala",
     f"https://{HOST}/shapoorji-pallonji-khopoli-plots-near-lonavala-faq",
     f"https://{HOST}/shapoorji-pallonji-legacy-khopoli-plots"

@@ -1587,6 +1587,95 @@ body {
   margin-top: 1.25rem;
 }
 
+/* Real Estate Market Intelligence & Arbitrage */
+.market-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.market-metric-card {
+  padding: 1.75rem 1.5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(16, 133, 73, 0.16);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(244, 253, 248, 0.85) 100%);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.market-metric-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold-primary);
+  box-shadow: 0 20px 45px -8px rgba(6, 40, 23, 0.16);
+}
+
+.metric-badge {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(16, 133, 73, 0.08);
+  color: var(--emerald-forest);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.85rem;
+  border: 1px solid rgba(16, 133, 73, 0.18);
+}
+
+.metric-highlight {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 0.4rem;
+}
+
+.metric-title {
+  font-family: var(--font-google);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--spre-navy);
+  margin-bottom: 0.5rem;
+}
+
+.metric-desc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.catalyst-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.catalyst-num {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--gold-primary);
+  margin-bottom: 0.5rem;
+  opacity: 0.85;
+}
+
+@media (max-width: 1024px) {
+  .market-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .market-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Catalyst Timeline Grid */
 .catalyst-timeline-grid {
   display: grid;

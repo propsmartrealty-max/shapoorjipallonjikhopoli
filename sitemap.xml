@@ -95,10 +95,18 @@
 
   <!-- Architectural Bungalow Villa Archetypes near Lonavala -->
   <url>
-    <loc>https://shapoorjitownship.in/shapoorji-pallonji-khopoli-bungalow-plots-near-lonavala</loc>
+    <loc>https://shapoorjitownship.in/shapoorji-pallonji-khopoli-bungalow-plots-near-lonavala/</loc>
     <lastmod>2026-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
+  </url>
+
+  <!-- Khopoli & Lonavala Real Estate Market Intelligence & Arbitrage -->
+  <url>
+    <loc>https://shapoorjitownship.in/shapoorji-pallonji-khopoli-lonavala-real-estate-market/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.98</priority>
   </url>
 
   <!-- Regional Golden Connectivity & Travel Times -->

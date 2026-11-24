@@ -56,6 +56,12 @@ PAGES = [
         'description': "Turnkey luxury villa architectural concepts for Shapoorji Pallonji Khopoli bungalow plots near Lonavala: The Glass Pavilion, Sahyadri Courtyard Estate, and Horizon Cascade Chalet."
     },
     {
+        'slug': 'shapoorji-pallonji-khopoli-lonavala-real-estate-market',
+        'section_id': 'real-estate-market',
+        'title': "Khopoli & Lonavala Real Estate Market | Price Trends, 45% Arbitrage & Investment",
+        'description': "Empirical micro-market analysis of Khopoli vs Lonavala real estate. Explore 45%-55% value arbitrage, Mumbai-Pune Missing Link impact, and 100% N.A. Collector-sanctioned plots from ₹95L*."
+    },
+    {
         'slug': 'shapoorji-pallonji-khopoli-plots-connectivity-lonavala',
         'section_id': 'connectivity',
         'title': "Connectivity & Travel Times | Shapoorji Pallonji Khopoli Plots near Lonavala",

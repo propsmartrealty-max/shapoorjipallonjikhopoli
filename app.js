@@ -831,6 +831,8 @@
       '/shapoorji-pallonji-khopoli-bungalow-plots-near-lonavala': { id: 'villas', nav: 'villas' },
       '/shapoorji-pallonji-khopoli-plots-connectivity-lonavala': { id: 'connectivity', nav: 'connectivity' },
       '/shapoorji-pallonji-khopoli-plots-near-lonavala-faq': { id: 'regional-faq', nav: 'regional-faq' },
+      '/shapoorji-pallonji-khopoli-lonavala-real-estate-market': { id: 'real-estate-market', nav: 'masterplan' },
+      '/khopoli-lonavala-real-estate-market': { id: 'real-estate-market', nav: 'masterplan' },
       '/shapoorji-pallonji-legacy-khopoli-plots': { id: 'legacy', nav: 'legacy' },
     };
 
@@ -842,6 +844,7 @@
       'gallery': '/shapoorji-pallonji-khopoli-plots-near-lonavala-gallery',
       'pillars': '/shapoorji-pallonji-khopoli-plots-wellness-pillars',
       'villas': '/shapoorji-pallonji-khopoli-bungalow-plots-near-lonavala',
+      'real-estate-market': '/shapoorji-pallonji-khopoli-lonavala-real-estate-market',
       'connectivity': '/shapoorji-pallonji-khopoli-plots-connectivity-lonavala',
       'regional-faq': '/shapoorji-pallonji-khopoli-plots-near-lonavala-faq',
       'legacy': '/shapoorji-pallonji-legacy-khopoli-plots',
@@ -902,7 +905,7 @@
     });
 
     // Scroll state & Scrollspy
-    const sections = ['masterplan', 'amenities', 'infographics', 'gallery', 'pillars', 'villas', 'connectivity', 'regional-faq', 'legacy'];
+    const sections = ['masterplan', 'amenities', 'infographics', 'gallery', 'pillars', 'villas', 'investment', 'real-estate-market', 'connectivity', 'regional-faq', 'legacy'];
     
     window.addEventListener('scroll', () => {
       if (!navbar) return;
